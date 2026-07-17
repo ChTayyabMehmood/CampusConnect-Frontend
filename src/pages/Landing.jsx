@@ -6,6 +6,11 @@ import HowDoesItWork from "../components/HowDoesItWork";
 import BuiltForComponent from "../components/BuiltForComponent";
 import StoriesComponents from "../components/StoriesComponents";
 import PricingCard from "../components/PricingCard";
+import Faqs from "../components/Faqs";
+import Button from "../components/common/Button";
+import { FaArrowRight } from "react-icons/fa6";
+import Footer from "../components/footer";
+
 const Landing = () => {
   const PricingObj = [
     {
@@ -83,8 +88,26 @@ const Landing = () => {
           ))}
         </div>
       </div>
+      <Faqs />
+      <div className="mt-16 bg-black gradient w-full h-100 rounded-4xl text-white ">
+        <h2 className="text-5xl font-bold text-center pt-16 ">
+          Ready to break out of your campus bubble?
+        </h2>
+        <p className="text-center font-medium text-white text-md my-6 mt-8">
+          Join 10,000+ students from NUST, LUMS, FAST, IBA, and <br />
+          universities worldwide who are already discovering
+          <br /> opportunities and building their careers.
+        </p>
 
-      <div className="mb-111"></div>
+        <div className="flex justify-center mt-8 ">
+          <Button text="Get Started" icon={FaArrowRight} />
+        </div>
+        <p className="text-center text-white font-normal text-md  mt-4">
+          Free for all college students. No credit card required.
+        </p>
+      </div>
+      <div className="mt-16"></div>
+      <Footer />
     </div>
   );
 };
