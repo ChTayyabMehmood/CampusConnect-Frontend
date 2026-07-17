@@ -1,24 +1,20 @@
 import { LuCheck } from "react-icons/lu";
 import { LuSparkles } from "react-icons/lu";
 
-const BuildForCard = () => {
+const BuildForCard = ({ icon, header, title, description, points, color }) => {
   return (
-    <div className="w-185 ">
-      <div className="h-12 bg-red-500 rounded-t-4xl p-4 text-white font-bold text-sm flex items-center gap-2">
+    <div className="w-150 ">
+      <div
+        className={`h-12 ${color} rounded-t-4xl p-4 text-white font-bold text-sm flex items-center gap-2`}
+      >
         <span>
           <LuSparkles size={20} />
         </span>
-        Year 1-2
+        {header}
       </div>
       <div className="h-50 p-4 rounded-b-4xl shadow-md ">
-        <h3 className="text-2xl font-semibold">
-          For First & Second Year Students
-        </h3>
-        <p className="mt-2 text-sm font-normal text-text">
-          Discover your first hackathon, join coding clubs, and build your
-          initial portfolio. Perfect for students at FAST, NUST, and other
-          universities starting their tech journey.
-        </p>
+        <h3 className="text-2xl font-semibold">{title}</h3>
+        <p className="mt-2 text-sm font-normal text-text">{description}</p>
 
         {/* tick list  */}
 
@@ -27,19 +23,19 @@ const BuildForCard = () => {
             <span className="text-black">
               <LuCheck size={20} />
             </span>
-            Beginner-friendly hackathons and workshops
+            {points[0]}
           </li>
           <li className="flex items-center gap-2">
             <span className="text-black">
               <LuCheck size={20} />
             </span>
-            Join college tech communities and clubs
+            {points[1]}
           </li>
           <li className="flex items-center gap-2">
             <span className="text-black">
               <LuCheck size={20} />
             </span>
-            Find teammates for your first projects portfolio
+            {points[2]}
           </li>
         </ul>
       </div>
