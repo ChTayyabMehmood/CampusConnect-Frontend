@@ -4,23 +4,27 @@ import {
   LuMapPin,
   LuUsers,
   LuBookmark,
+  LuClock, // Added Clock icon
 } from "react-icons/lu";
 import { useState } from "react";
-import { typeColors, statusColors } from "../utils/colors"; // Import your color maps
+import { typeColors, statusColors } from "../utils/colors";
 
 const FeedContainer = ({ props }) => {
   const {
     title,
     type,
     status,
+    deadline, // New prop for the Calendar text (e.g. "Closed", "1d left")
     description,
     location,
     participants,
     tags = [],
     organizer,
+    extraBadge, // New prop for extra special badges (e.g. "Closing soon")
+    initialBookmarked = false, // Allows you to start with a filled bookmark
   } = props;
 
-  const [isBookmarked, setIsBookmarked] = useState(false);
+  const [isBookmarked, setIsBookmarked] = useState(initialBookmarked);
 
   const handleBookmark = (e) => {
     e.stopPropagation();
@@ -46,10 +50,10 @@ const FeedContainer = ({ props }) => {
       </button>
 
       {/* Top Row: Title & Badges */}
-      <div className="pr-10 flex flex-wrap items-center gap-3">
+      <div className="pr-10 flex flex-wrap items-center gap-2">
         <h2 className="text-xl font-bold text-gray-900">{title}</h2>
 
-        {/* Type Badge (Uses typeColors) */}
+        {/* Type Badge */}
         <span
           className={`inline-flex items-center px-3 py-1 text-sm font-medium rounded-full ${
             typeColors[type] || "bg-gray-50 text-gray-600"
@@ -58,7 +62,7 @@ const FeedContainer = ({ props }) => {
           {type}
         </span>
 
-        {/* Status Badge (Uses statusColors) */}
+        {/* Status Badge */}
         <span
           className={`inline-flex items-center px-3 py-1 text-sm font-medium rounded-full ${
             statusColors[status] || "bg-gray-50 text-gray-600"
@@ -66,14 +70,22 @@ const FeedContainer = ({ props }) => {
         >
           {status}
         </span>
+
+        {/* Extra Badge (e.g., Closing Soon) */}
+        {extraBadge && (
+          <span className="inline-flex items-center gap-1 px-3 py-1 text-sm font-medium rounded-full bg-green-50 text-green-600">
+            <LuClock size={14} />
+            {extraBadge}
+          </span>
+        )}
       </div>
 
       {/* Description */}
-      <p className="text-gray-600 text-sm mt-3 leading-relaxed">
+      <p className="text-gray-600 text-sm mt-3 leading-relaxed line-clamp-2">
         {description}
       </p>
 
-      {/* Meta Row: Organizer, Status, Location, Participants */}
+      {/* Meta Row: Organizer, Deadline, Location, Participants */}
       <div className="flex flex-wrap items-center gap-5 mt-4 text-gray-500">
         {organizer && (
           <div className="flex items-center gap-1.5">
@@ -85,7 +97,7 @@ const FeedContainer = ({ props }) => {
         )}
         <div className="flex items-center gap-1.5">
           <LuCalendar size={18} className="text-gray-400" />
-          <span className="text-sm font-medium text-gray-600">{status}</span>
+          <span className="text-sm font-medium text-gray-600">{deadline}</span>
         </div>
         <div className="flex items-center gap-1.5">
           <LuMapPin size={18} className="text-gray-400" />
