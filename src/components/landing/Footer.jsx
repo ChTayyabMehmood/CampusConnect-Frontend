@@ -1,4 +1,4 @@
-import logo from "./../assets/campusConnect.png";
+import logo from "../../assets/campusConnect.png";
 import {
   FaFacebookF,
   FaInstagram,

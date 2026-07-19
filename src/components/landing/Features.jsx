@@ -1,4 +1,4 @@
-import FeatureCard from "./common/FeatureCard";
+import FeatureCard from "../common/FeatureCard";
 import { CiSearch, CiChat1 } from "react-icons/ci";
 import { RxPeople } from "react-icons/rx";
 import { BsFillSuitcaseLgFill } from "react-icons/bs";
@@ -76,7 +76,7 @@ const features = [
   },
 ];
 
-const FeatureComponent = () => {
+const Features = () => {
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
@@ -110,4 +110,4 @@ const FeatureComponent = () => {
   );
 };
 
-export default FeatureComponent;
+export default Features;

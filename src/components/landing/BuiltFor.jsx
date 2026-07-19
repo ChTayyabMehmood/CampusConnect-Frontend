@@ -1,5 +1,5 @@
-import BuildForCard from "./BuildForCard";
-const BuiltForComponent = () => {
+import BuiltForCard from "./BuiltForCard";
+const BuiltFor = () => {
   const dataObj = [
     {
       icon: "",
@@ -71,7 +71,7 @@ const BuiltForComponent = () => {
 
       <div className="flex flex-wrap grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {dataObj.map((item, index) => (
-          <BuildForCard
+          <BuiltForCard
             key={index}
             icon={item.icon}
             header={item.header}
@@ -86,4 +86,4 @@ const BuiltForComponent = () => {
   );
 };
 
-export default BuiltForComponent;
+export default BuiltFor;

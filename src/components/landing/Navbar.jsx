@@ -1,4 +1,4 @@
-import logo from "../assets/campusConnect.png";
+import logo from "../../assets/campusConnect.png";
 const Navbar = () => {
   return (
     <div className=" h-16 px-10 font-primary flex justify-between items-center ">

@@ -1,4 +1,4 @@
-const HowDoesItWork = () => {
+const HowItWorks = () => {
   return (
     <div>
       <h3 className="text-center font-semibold text-sm text-text ">
@@ -59,4 +59,4 @@ const HowDoesItWork = () => {
   );
 };
 
-export default HowDoesItWork;
+export default HowItWorks;

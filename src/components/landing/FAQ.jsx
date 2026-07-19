@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdOutlineKeyboardArrowUp } from "react-icons/md";
 
-const Faqs = () => {
+const FAQ = () => {
   const faqsData = [
     {
       id: 1,
@@ -86,4 +86,4 @@ const Faqs = () => {
   );
 };
 
-export default Faqs;
+export default FAQ;

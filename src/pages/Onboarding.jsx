@@ -24,16 +24,20 @@ import Skill from "./../components/onBoarding/Skill";
 import { useState } from "react";
 const Onboarding = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const [showComponent, setShowComponent] = useState(true);
 
   return (
     <div className="w-2xl mx-auto mt-10 ">
       {/* steps 1 + 2 +  3 +4  */}
-
-      <div className="flex justify-between items-center relative">
+      <h1 className="text-3xl font-bold text-gray-900 mb-4">
+        Welcome to CampusConnect
+      </h1>
+      <div className="flex justify-between items-center relative mb-8">
         {/* progress line behind */}
         <div className="absolute left-0 top-4 h-0.5 w-full bg-gray-200 -z-10" />
-        <div className="absolute left-0 top-4 h-0.5 w-1/4 bg-black -z-10" />{" "}
+        <div
+          className="absolute left-0 top-4 h-0.5 w-1/4 bg-black -z-10"
+          style={{ width: `${((currentStep - 1) / 3) * 100}%` }}
+        />
         {/* progress fill */}
         {[1, 2, 3, 4].map((step, index) => (
           <div key={step} className="flex flex-col items-center">
@@ -41,7 +45,7 @@ const Onboarding = () => {
               className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold
               ${index < 1 ? "bg-black text-white" : "bg-white text-gray-400 border-2 border-gray-300"}`}
             >
-              {index < 1 ? "✓" : step}
+              {index + 1}
             </div>
             <span className="text-xs mt-1 text-gray-500">
               {step === 1 && "Role"}
@@ -112,10 +116,6 @@ const Onboarding = () => {
                 </p>
               </div>
             </div>
-          </div>
-
-          <div className=" w-full mt-6">
-            <Button text="Continue" black={true} />
           </div>
         </div>
       )}
@@ -213,6 +213,31 @@ const Onboarding = () => {
           </div>
         </div>
       )}
+
+      <div className="flex gap-4 mt-12 mx-auto ">
+        {currentStep == 1 && (
+          <Button
+            text="Continue"
+            black={true}
+            onClick={() => setCurrentStep((prev) => Math.min(prev + 1, 4))}
+          />
+        )}
+        {currentStep >= 2 && (
+          <>
+            <Button
+              text="Back"
+              iconLeft={<LuChevronLeft />}
+              onClick={() => setCurrentStep((prev) => Math.max(prev - 1, 1))}
+            />
+            <Button
+              text="Continue"
+              black={true}
+              iconRight={<LuChevronRight />}
+              onClick={() => setCurrentStep((prev) => Math.min(prev + 1, 4))}
+            />
+          </>
+        )}
+      </div>
     </div>
   );
 };

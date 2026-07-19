@@ -1,5 +1,5 @@
 import ReviewCard from "./ReviewCard";
-const StoriesComponents = () => {
+const Testimonials = () => {
   const dataObj = [
     {
       id: 1,
@@ -92,4 +92,4 @@ const StoriesComponents = () => {
   );
 };
 
-export default StoriesComponents;
+export default Testimonials;

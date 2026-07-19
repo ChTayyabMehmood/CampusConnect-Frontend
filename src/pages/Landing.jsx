@@ -1,15 +1,15 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import HeroComponent from "../components/HeroComponent";
-import FeatureComponent from "../components/FeatureComponent";
-import HowDoesItWork from "../components/HowDoesItWork";
-import BuiltForComponent from "../components/BuiltForComponent";
-import StoriesComponents from "../components/StoriesComponents";
-import PricingCard from "../components/PricingCard";
-import Faqs from "../components/Faqs";
+import Navbar from "../components/landing/Navbar";
+import Hero from "../components/landing/Hero";
+import Features from "../components/landing/Features";
+import HowItWorks from "../components/landing/HowItWorks";
+import BuiltFor from "../components/landing/BuiltFor";
+import Testimonials from "../components/landing/Testimonials";
+import Pricing from "../components/landing/Pricing";
+import FAQ from "../components/landing/FAQ";
 import Button from "../components/common/Button";
 import { FaArrowRight } from "react-icons/fa6";
-import Footer from "../components/footer";
+import Footer from "../components/landing/Footer";
 
 const Landing = () => {
   const PricingObj = [
@@ -64,31 +64,13 @@ const Landing = () => {
   return (
     <div className="w-7xl  mx-auto overflow-hidden">
       <Navbar />
-      <HeroComponent />
-      <FeatureComponent />
-      <HowDoesItWork />
-      <BuiltForComponent />
-      <StoriesComponents />
-      <div>
-        <div className="text-sm font-semibold text-center text-text mt-10">
-          Pricing
-        </div>
-        <h2 className="text-5xl font-bold text-center ">
-          Simple, student-friendly pricing.
-        </h2>
-        <p className="text-center text-text font-normal text-lg mt-4">
-          Start free and upgrade when you need more. No
-          <br />
-          hidden fees, no surprises.
-        </p>
-
-        <div className="flex  justify-center gap-8 mt-12">
-          {PricingObj.map((pricing) => (
-            <PricingCard key={pricing.id} pricing={pricing} />
-          ))}
-        </div>
-      </div>
-      <Faqs />
+      <Hero />
+      <Features />
+      <HowItWorks />
+      <BuiltFor />
+      <Testimonials />
+      <Pricing pricingData={PricingObj} />
+      <FAQ />
       <div className="mt-16 bg-black gradient w-full h-100 rounded-4xl text-white ">
         <h2 className="text-5xl font-bold text-center pt-16 ">
           Ready to break out of your campus bubble?
@@ -99,7 +81,7 @@ const Landing = () => {
           <br /> opportunities and building their careers.
         </p>
 
-        <div className="flex justify-center mt-8 ">
+        <div className="flex justify-center mt-8 w-1/9 mx-auto">
           <Button text="Get Started" icon={FaArrowRight} />
         </div>
         <p className="text-center text-white font-normal text-md  mt-4">

@@ -144,10 +144,6 @@ const PersonalDetails = () => {
           </div>
         </div>
       </div>
-      <div className="flex gap-4 mt-12 max-w-md mx-auto">
-        <Button text="Back" iconLeft={<LuChevronLeft />} />
-        <Button text="Continue" black={true} iconRight={<LuChevronRight />} />
-      </div>
     </div>
   );
 };

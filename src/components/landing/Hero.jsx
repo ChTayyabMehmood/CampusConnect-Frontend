@@ -1,15 +1,15 @@
 import React from "react";
-import HeroBadge from "../components/HeroBadge";
-import Button from "../components/common/Button";
+import HeroBadge from "./HeroBadge";
+import Button from "../common/Button";
 import { FaArrowRight } from "react-icons/fa";
-import HeroProduct from "../components/common/HeroProduct";
+import HeroProduct from "../common/HeroProduct";
 import { LuGraduationCap } from "react-icons/lu";
 import { LuBrain } from "react-icons/lu";
 import { RxPeople } from "react-icons/rx";
 import { LuShield } from "react-icons/lu";
-import StatCard from "../components/common/StatCard";
+import StatCard from "../common/StatCard";
 
-const HeroComponent = () => {
+const Hero = () => {
   return (
     <div className="mx-auto flex flex-col items-center justify-center  mt-18">
       <HeroBadge
@@ -94,4 +94,4 @@ const HeroComponent = () => {
   );
 };
 
-export default HeroComponent;
+export default Hero;
