@@ -39,7 +39,7 @@ const RecommendedClubs = () => {
           <div key={club.id} className="flex items-center gap-3 cursor-pointer">
             {/* Initial-based avatar square */}
             <div
-              className={`w-10 h-10 flex-shrink-0 rounded-xl ${club.bgColor} flex items-center justify-center text-white font-bold text-sm select-none`}
+              className={`w-10 h-10 shrink-0 rounded-xl ${club.bgColor} flex items-center justify-center text-white font-bold text-sm select-none`}
             >
               {club.initial}
             </div>
@@ -47,7 +47,7 @@ const RecommendedClubs = () => {
               <h3 className="font-medium text-sm text-gray-900 leading-tight">
                 {club.name}
               </h3>
-              <p className="text-xs text-gray-500 truncate max-w-[200px]">
+              <p className="text-xs text-gray-500 truncate max-w-50">
                 {club.org}
               </p>
             </div>

@@ -219,6 +219,7 @@ const Onboarding = () => {
           <Button
             text="Continue"
             black={true}
+            css="w-full"
             onClick={() => setCurrentStep((prev) => Math.min(prev + 1, 4))}
           />
         )}
@@ -227,11 +228,13 @@ const Onboarding = () => {
             <Button
               text="Back"
               iconLeft={<LuChevronLeft />}
+              css="w-full"
               onClick={() => setCurrentStep((prev) => Math.max(prev - 1, 1))}
             />
             <Button
               text="Continue"
               black={true}
+              css="w-full"
               iconRight={<LuChevronRight />}
               onClick={() => setCurrentStep((prev) => Math.min(prev + 1, 4))}
             />
