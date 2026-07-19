@@ -22,3 +22,112 @@ export const SKILLS = [
   { id: "product", label: "Product Management", icon: "LuBriefcase" },
   { id: "marketing", label: "Marketing", icon: "LuTrendingUp" },
 ];
+// CATEGORIES array based on your existing `typeColors` keys
+export const CATEGORIES = [
+  "ALL",
+  "Hackathon",
+  "Internship",
+  "Workshop",
+  "Scholarship",
+  "Competition",
+  "Mentorship",
+];
+
+// OPPORTUNITIES array containing mock data
+export const opportunities = [
+  {
+    id: 1,
+    title: "Build for India Hackathon 2026",
+    type: "Hackathon",
+    status: "Live",
+    description: "India's largest student hackathon with ₹50L+ in prizes.",
+    location: "Virtual",
+    organizer: "SIH & Partners",
+    participants: "10k+",
+    tags: ["Web3", "AI/ML", "Open Innovation"],
+  },
+  {
+    id: 2,
+    title: "Google Summer Internship 2026",
+    type: "Internship",
+    status: "InPerson",
+    description:
+      "A 12-week immersive internship program for undergrads focusing on backend infrastructure and cloud computing.",
+    location: "Mountain View, CA",
+    organizer: "Google",
+    participants: "1.5k+",
+    tags: ["Software Engineering", "Cloud", "Backend"],
+  },
+  {
+    id: 3,
+    title: "AI for Social Impact Workshop",
+    type: "Workshop",
+    status: "Online",
+    description:
+      "Learn to apply modern deep learning techniques to solve real-world humanitarian challenges.",
+    location: "Online",
+    organizer: "AI4Good Foundation",
+    participants: "500+",
+    tags: ["Machine Learning", "Data Science", "Ethics"],
+  },
+  {
+    id: 4,
+    title: "Future Innovators Scholarship 2026",
+    type: "Scholarship",
+    status: "Closed",
+    description:
+      "Full tuition scholarship for incoming freshmen exhibiting extraordinary leadership in STEM fields.",
+    location: "National",
+    organizer: "STEM Alliance",
+    participants: "120",
+    tags: ["Merit-based", "STEM", "Freshmen"],
+  },
+  {
+    id: 5,
+    title: "Global Entrepreneurship Fellowship",
+    type: "Fellowship",
+    status: "Hybrid",
+    description:
+      "A one-year global fellowship program connecting early-stage founders with industry leading mentors and VCs.",
+    location: "Hybrid",
+    organizer: "StartupLab Global",
+    participants: "250",
+    tags: ["Entrepreneurship", "Venture Capital", "Mentorship"],
+  },
+  {
+    id: 6,
+    title: "Cyber Defense Competition 2026",
+    type: "Competition",
+    status: "Virtual",
+    description:
+      "Compete against top university teams in an immersive red-team vs blue-team cybersecurity simulation.",
+    location: "Remote",
+    organizer: "CyberSec Institute",
+    participants: "2k+",
+    tags: ["Cybersecurity", "Ethical Hacking", "Capture The Flag"],
+  },
+  {
+    id: 7,
+    title: "GenAI Developer Mentorship",
+    type: "Mentorship",
+    status: "Online",
+    description:
+      "Get 1-on-1 guidance from seasoned AI engineers to help you build and deploy your first LLM application.",
+    location: "Online",
+    organizer: "OpenAI Dev Relations",
+    participants: "350",
+    tags: ["Generative AI", "LLMs", "Python"],
+  },
+  {
+    id: 8,
+    title: "React Global Conference 2026",
+    type: "Conference",
+    status: "Offline",
+    description:
+      "The biggest annual gathering of React developers featuring 3 days of keynotes, talks, and workshops.",
+    location: "San Francisco, CA",
+    organizer: "Meta Open Source",
+    participants: "5k+",
+    tags: ["Frontend", "React", "JS/TS"],
+  },
+];

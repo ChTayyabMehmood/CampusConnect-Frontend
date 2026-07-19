@@ -1,0 +1,17 @@
+[33m9636da9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: checkout: moving from main to main
+[33m9636da9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{1}: reset: moving to origin/main
+[33mb59a986[m HEAD@{2}: checkout: moving from main to main
+[33mb59a986[m HEAD@{3}: commit: WIP: save local changes before sync
+[33m9636da9[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{4}: commit: test: contribution graph
+[33mf39a348[m[33m ([m[1;32mbackup-before-email-fix[m[33m)[m HEAD@{5}: reset: moving to origin/main
+[33mf39a348[m[33m ([m[1;32mbackup-before-email-fix[m[33m)[m HEAD@{6}: checkout: moving from main to main
+[33mf39a348[m[33m ([m[1;32mbackup-before-email-fix[m[33m)[m HEAD@{7}: commit: chore: fix git email for contributions
+[33m1b00133[m HEAD@{8}: commit: Improve: floder Strucutre
+[33m1f80be7[m HEAD@{9}: commit: feat: OnBoarding Page UI
+[33m3717726[m HEAD@{10}: commit: feat: footer + pricing section added => landing page complete
+[33m0237a70[m HEAD@{11}: commit: feat: Reviews Section + Pricing Section
+[33me2bca71[m HEAD@{12}: commit: nothing
+[33m7dab0c5[m HEAD@{13}: commit: update: Readme page
+[33mad01b70[m HEAD@{14}: commit: feat: navbar + heroComponent + HowDoesItWork
+[33m32098f7[m HEAD@{15}: Branch: renamed refs/heads/master to refs/heads/main
+[33m32098f7[m HEAD@{17}: commit (initial): first commit
