@@ -6,12 +6,13 @@ const Button = ({
   iconLeft,
   iconRight,
   css,
+  toLink,
 }) => (
   <button
     onClick={onClick}
     disabled={disabled}
     className={`
-      flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium text-sm
+      flex items-center justify-center gap-2  py-3 rounded-xl font-medium text-sm
       transition-all duration-200 
       ${
         black

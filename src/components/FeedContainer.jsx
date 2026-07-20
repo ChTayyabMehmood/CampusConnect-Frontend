@@ -8,9 +8,10 @@ import {
 } from "react-icons/lu";
 import { useState } from "react";
 import { typeColors, statusColors } from "../utils/colors";
-
+import { useNavigate } from "react-router-dom";
 const FeedContainer = ({ props }) => {
   const {
+    id,
     title,
     type,
     status,
@@ -24,15 +25,22 @@ const FeedContainer = ({ props }) => {
     initialBookmarked = false, // Allows you to start with a filled bookmark
   } = props;
 
+  const navigate = useNavigate();
   const [isBookmarked, setIsBookmarked] = useState(initialBookmarked);
-
   const handleBookmark = (e) => {
     e.stopPropagation();
     setIsBookmarked(!isBookmarked);
   };
 
+  const handleClick = () => {
+    navigate(`/feed/opportunity/${id}`);
+  };
+
   return (
-    <div className="relative mt-6 bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300">
+    <div
+      onClick={handleClick}
+      className="cursor-pointer relative mt-6 bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-lg transition-shadow duration-300"
+    >
       {/* Bookmark Button */}
       <button
         onClick={handleBookmark}

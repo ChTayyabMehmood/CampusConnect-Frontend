@@ -5,8 +5,10 @@ import { opportunities } from "../utils/constant";
 import RecommendedMentors from "./../components/RecommendedMentors";
 import TrendingClubs from "../components/TrendingClubs";
 import { LuUsers, LuCalendar, LuCirclePlus } from "react-icons/lu";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-7xl mx-auto mt-20 flex gap-3">
       {/* div Left dashbaord content + right sidebar(recommed mentor + trending + quick links) */}

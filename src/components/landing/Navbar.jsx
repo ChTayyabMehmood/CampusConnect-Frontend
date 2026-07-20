@@ -1,16 +1,19 @@
 import logo from "../../assets/campusConnect.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <div className=" h-16 px-10 font-primary flex justify-between items-center ">
-      <img src={logo} alt="CampusConnect Logo" className="h-8" />
+      <Link to="/">
+        <img src={logo} alt="CampusConnect Logo" className="h-8" />
+      </Link>
 
       <div>
         <ul className="flex gap-6 font-medium text-sm text-text ">
-          <li>Feed</li>
-          <li>Teams</li>
-          <li>Clubs</li>
-          <li>Events</li>
-          <li>Mentors</li>
+          <Link to="/feed">Feed</Link>
+          <Link to="/teams">Teams</Link>
+          <Link to="/clubs">Clubs</Link>
+          <Link to="/events">Events</Link>
+          <Link to="/mentors">Mentors</Link>
         </ul>
       </div>
 

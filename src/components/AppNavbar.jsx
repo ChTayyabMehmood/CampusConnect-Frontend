@@ -3,6 +3,7 @@ import { IoIosSearch } from "react-icons/io";
 import { LuPlus } from "react-icons/lu";
 import { FiBookmark } from "react-icons/fi";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const AppNavbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -10,24 +11,41 @@ const AppNavbar = () => {
     <div className="border-b border-gray-200">
       <div className="w-7xl mx-auto h-20 font-primary flex justify-between items-center ">
         <div className="flex gap-10 items-center ">
-          <img src={logo} alt="CampusConnect Logo" className="h-8" />
+          <Link to="/">
+            <img src={logo} alt="CampusConnect Logo" className="h-8" />
+          </Link>
 
           <ul className="flex gap-6 font-medium text-md text-gray-700">
-            <li className="hover:text-black cursor-pointer transition-colors">
+            <Link
+              to="/feed"
+              className="hover:text-black cursor-pointer transition-colors"
+            >
               Feed
-            </li>
-            <li className="hover:text-black cursor-pointer transition-colors">
+            </Link>
+            <Link
+              to="/teams"
+              className="hover:text-black cursor-pointer transition-colors"
+            >
               Teams
-            </li>
-            <li className="hover:text-black cursor-pointer transition-colors">
+            </Link>
+            <Link
+              to="/clubs"
+              className="hover:text-black cursor-pointer transition-colors"
+            >
               Clubs
-            </li>
-            <li className="hover:text-black cursor-pointer transition-colors">
+            </Link>
+            <Link
+              to="/events"
+              className="hover:text-black cursor-pointer transition-colors"
+            >
               Events
-            </li>
-            <li className="hover:text-black cursor-pointer transition-colors">
+            </Link>
+            <Link
+              to="/mentors"
+              className="hover:text-black cursor-pointer transition-colors"
+            >
               Mentors
-            </li>
+            </Link>
           </ul>
         </div>
 
